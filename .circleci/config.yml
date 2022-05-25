@@ -24,7 +24,7 @@ jobs:
             - v1-dependencies- # fallback in case previous cache key is not found
       - run:
           name: "Publish Docker image with Jib"
-          command: ./mvnw compile jib:build -B -DskipTests=true -P build-docker-image
+          command: mvn compile jib:build -B -DskipTests=true -P build-docker-image
       - save_cache:
             paths:
               - ~/.m2
