@@ -12,7 +12,7 @@ jobs:
       - image: cimg/openjdk:17.0.3
         auth:
           username: paavosilva
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          password: $DOCKERHUB_TOKEN  # context / project UI env-var reference
     working_directory: ~/orderservice
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
